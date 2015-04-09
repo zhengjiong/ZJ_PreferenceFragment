@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Notifications"
+    >
+        <CheckBoxPreference
+            android:title="Notification"
+            android:defaultValue="true"
+            android:summaryOn="on"
+            android:summaryOff="off"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Settings"
+        >
+        <CheckBoxPreference
+            android:title="Dark theme"
+            android:defaultValue="true"
+            android:summaryOn="on"
+            android:summaryOff="off"
+            android:widgetLayout="@layout/switch_compat"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Settings"
+        >
+        <CheckBoxPreference
+            android:title="Dark theme"
+            android:defaultValue="true"
+            android:summaryOn="on"
+            android:summaryOff="off"
+            android:widgetLayout="@layout/switch_compat"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Versions"
+        >
+        <Preference
+            android:title="Preference"
+            android:summary="summary"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Pattern"
+        >
+        <EditTextPreference
+            android:title="EditTextPreference"
+            android:summary="summary"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Pattern"
+        >
+        <ListPreference
+            android:title="ListPreference"
+            android:entryValues="@array/items"
+            android:entries="@array/items"
+            android:defaultValue="false"
+        />
+    </PreferenceCategory>
+
+</PreferenceScreen>

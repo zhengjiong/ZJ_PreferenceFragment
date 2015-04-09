@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+    <FrameLayout
+        android:id="@+id/replace_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+
+
+    <!--
+    讓右邊OverFlow遠點使用白色樣式
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+    點擊OverFlow彈出框使用淺色樣式
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    -->
