@@ -3,9 +3,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="Notifications"
+        android:title="CheckBoxPreference"
     >
         <CheckBoxPreference
+            android:key="check_box"
             android:title="Notification"
             android:defaultValue="true"
             android:summaryOn="on"
@@ -13,9 +14,21 @@
         />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Settings"
+        android:title="SwitchCompat_setWidgetLayoutResource方式(無動畫)"
         >
         <CheckBoxPreference
+            android:key="switch_compat"
+            android:title="Dark theme"
+            android:defaultValue="true"
+            android:summaryOn="on"
+            android:summaryOff="widgetLayoutoff"
+            /><!--android:="@layout/switch_compat"-->
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="SwitchCompat_widgetLayout方式(有動畫)"
+        >
+        <CheckBoxPreference
+            android:key="android_widgetLayout"
             android:title="Dark theme"
             android:defaultValue="true"
             android:summaryOn="on"
@@ -24,41 +37,42 @@
             />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Settings"
-        >
-        <CheckBoxPreference
-            android:title="Dark theme"
-            android:defaultValue="true"
-            android:summaryOn="on"
-            android:summaryOff="off"
-            android:widgetLayout="@layout/switch_compat"
-            />
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:title="Versions"
+        android:title="Preference"
         >
         <Preference
             android:title="Preference"
             android:summary="summary"
+            android:key="Preference"
         />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Pattern"
+        android:title="EditTextPreference"
         >
         <EditTextPreference
             android:title="EditTextPreference"
             android:summary="summary"
+            android:key="edittext_preference"
         />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Pattern"
+        android:title="ListPreference"
         >
         <ListPreference
             android:title="ListPreference"
+            android:dialogTitle="ListDialog"
             android:entryValues="@array/items"
             android:entries="@array/items"
             android:defaultValue="false"
+            android:key="list_preference"
         />
     </PreferenceCategory>
-
+    <PreferenceCategory
+        android:title="RingtonePreference"
+    >
+        <RingtonePreference
+            android:title="title"
+            android:summary="summary"
+            android:key="RingtonePreference"
+        />
+    </PreferenceCategory>
 </PreferenceScreen>

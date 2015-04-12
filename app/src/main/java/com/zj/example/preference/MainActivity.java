@@ -1,67 +1,38 @@
 package com.zj.example.preference;
 
-import android.app.FragmentManager;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+
+import com.zj.example.preference.demo1.BasicPreferenceDemo;
+import com.zj.example.preference.demo2.CustomWidgetLayoutPreferenceDemo;
 
 /**
- *
- * @author zj
- * @date 2015年4月8日08:39:50
+ * create by zhengjiong
+ * Date: 2015-04-12
+ * Time: 18:30
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_layout);
 
 
-        initToolbar();
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.replace_holder, new SettingsFragment()).commit();
     }
 
-    private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn1:
+                startActivity(new Intent(MainActivity.this, BasicPreferenceDemo.class));
 
-        toolbar.setTitle("PreferenceFragment Demo");
-        toolbar.setTitleTextColor(Color.WHITE);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public static class SettingsFragment extends PreferenceFragment {
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.settings_fragment_xml);
+                break;
+            case R.id.btn2:
+                startActivity(new Intent(MainActivity.this, CustomWidgetLayoutPreferenceDemo.class));
+                break;
         }
     }
 }

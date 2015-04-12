@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".demo1.BasicPreferenceDemo"/>
+        <activity android:name=".demo2.CustomWidgetLayoutPreferenceDemo"/>
     </application>
 
 </manifest>
