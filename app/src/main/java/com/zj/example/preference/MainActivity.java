@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.zj.example.preference.demo1.BasicPreferenceDemo;
 import com.zj.example.preference.demo2.CustomWidgetLayoutPreferenceDemo;
+import com.zj.example.preference.demo3.V4PreferenceFragmentDemo;
 
 /**
  * create by zhengjiong
@@ -32,6 +33,9 @@ public class MainActivity extends ActionBarActivity{
                 break;
             case R.id.btn2:
                 startActivity(new Intent(MainActivity.this, CustomWidgetLayoutPreferenceDemo.class));
+                break;
+            case R.id.btn3:
+                startActivity(new Intent(MainActivity.this, V4PreferenceFragmentDemo.class));
                 break;
         }
     }

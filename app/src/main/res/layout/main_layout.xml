@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="Custom WidgetLayout Demo"
         android:onClick="onClick"/>
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="V4 PreferenceFragment Demo"
+        android:onClick="onClick"/>
 </LinearLayout>

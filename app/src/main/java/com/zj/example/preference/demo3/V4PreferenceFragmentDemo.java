@@ -2,6 +2,7 @@ package com.zj.example.preference.demo3;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -29,7 +30,8 @@ public class V4PreferenceFragmentDemo extends ActionBarActivity{
          * 使用android-support-v4-preferencefragment-master,
          * 這裡就可以使用getSupportFragmentManager
          */
-        getSupportFragmentManager().beginTransaction().replace(R.id.replace_holder, new CustomWidgetLayoutSettingFragment()).commit();
+        //getSupportFragmentManager().beginTransaction().replace(R.id.replace_holder, new CustomWidgetLayoutSettingFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.replace_holder, new CustomWidgetLayoutSettingFragment2()).commit();
     }
 
     private void initToolbar() {
@@ -46,7 +48,16 @@ public class V4PreferenceFragmentDemo extends ActionBarActivity{
         @Override
         public void onCreate(Bundle paramBundle) {
             super.onCreate(paramBundle);
-            addPreferencesFromResource(R.xml.custom_settings_fragment_xml);
+            addPreferencesFromResource(R.xml.settings_fragment_xml);
+        }
+    }
+
+    public static class CustomWidgetLayoutSettingFragment2 extends PreferenceFragment{
+
+        @Override
+        public void onCreate(Bundle paramBundle) {
+            super.onCreate(paramBundle);
+            addPreferencesFromResource(R.xml.settings_fragment_xml);
         }
     }
 }
